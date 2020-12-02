@@ -20,6 +20,8 @@ func readLines(path string) []string {
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		if err == nil {
+			// I technically could have just put everything in main here
+			// and processed it line by line lol...
 			lines = append(lines, scanner.Text())
 		}
 	}
