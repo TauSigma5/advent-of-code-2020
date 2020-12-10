@@ -7,6 +7,8 @@ import (
 	"strings"
 )
 
+var bagTrees []bag
+
 func cleanString(input string) string {
 	// Removes words like bag, bags and all punctuation
 	// as well as leading and trailing spaces
@@ -56,11 +58,29 @@ func generateRules() [][]string {
 }
 
 func main() {
-	fmt.Println(generateRules())
+	rules := generateRules()
+	
+
+}
+
+
+func newTree(color string, parent string, children []string) bag {
+
+	var children []bag
+
+	for i := 0; i < len(children); i++ {
+		childColors := strings.Split(children[i], " ")
+
+	}
+
+	newBag := bag {
+		color: traits[0]
+		children
+	}
 }
 
 type bag struct {
-	// Bag struct, I hope these are enough functions
+	// Bag struct
 	color    string
 	children *[]bag
 	parent   *bag
